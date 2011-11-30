@@ -1,7 +1,7 @@
-(defn primality-test [x] 
-	(.isProbablePrime (BigInteger/valueOf x) 15))
+(def prime-certainty 15)
 
-(def is-prime primality-test)
+(defn is-prime [x] 
+	(.isProbablePrime (BigInteger/valueOf x) prime-certainty))
 
 (defn find-it []
 	"Calculate the sum of all the primes below two million."
